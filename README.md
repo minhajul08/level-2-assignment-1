@@ -54,4 +54,68 @@ email: 'minhazmehadi63@gmail.com'
 
 console.log (person)
 
-# output:{"name": 'Minhajul Islam Nirob',"age": 20,"email": "minhazmehadi63@gmail.com"
+# output:{"name": 'Minhajul Islam Nirob',"age": 20,"email": "minhazmehadi63@gmail.com" 
+
+
+# Provide an example of using union and intersection types in TypeScript.
+
+
+## TypeScript’s powerful type system allows us to build expressive and safe code. Two important tools in this system are Union Types (|) and Intersection Types (&). Let’s explore what they are and how to use them in real-world scenarios.
+
+# Union Types (|) 
+## A union type allows a variable to hold one of multiple types. Think of it as “either/or”.
+
+#  Example: Union Type
+type Status = "success" | "error" | "loading";
+
+function showMessage(status: Status) {
+  if (status === "success") {
+    console.log(" Operation was successful.");
+  } else if (status === "error") {
+    console.log(" Something went wrong.");
+  } else {
+    console.log(" Loading...");
+  }
+}
+
+showMessage("success");
+
+## Output: Operation was successful.
+
+
+# Intersection Types (&) 
+
+## An intersection type combines multiple types into one. The resulting type has all the properties of the combined types.
+
+# Example: Intersection Type
+
+type ContactInfo = {
+  email: string;
+  phone: string;
+};
+
+type PersonalInfo = {
+  name: string;
+  age: number;
+};
+
+type User = ContactInfo & PersonalInfo;
+
+const user: User = {
+  name: "Minhajul Islam Nirob",
+  age: 20,
+  email: "minhazmehadi63@gmail.com",
+  phone: "0123456789"
+};
+
+console.log(user);
+
+# Output: {
+  "name": "Minhajul Islam Nirob",
+  "age": 20,
+  "email": "minhazmehadi63@gmail.com",
+  "phone": "0123456789"
+}
+
+
+
