@@ -1,4 +1,4 @@
-What are some differences between interfaces and types in TypeScript?
+## What are some differences between interfaces and types in TypeScript?
 
 Answer: TypeScript, type, and interface all define an object's structure. While the interface is extendable and primarily for object shapes, the type is more versatile, allowing unions, intersections, and more complex type definitions.
 Type in TypeScript :
